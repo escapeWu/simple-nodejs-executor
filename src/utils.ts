@@ -22,14 +22,20 @@ function getMarkdownMetaData(filePath: string): Post | null {
 
 		// 检查文件是否至少有两行
 		if (lines.length >= 2) {
-			const metadata = JSON.parse(lines[1]) as DigtalGardenMetadata;
-			return {
-				created: metadata.created,
-				updated: metadata.updated,
-				title: metadata.title ?? path.basename(filePath, '.md'),
-				link: metadata.permalink,
-				content: lines.slice(3).join('\n')
+			try {
+				const metadata = JSON.parse(lines[1]) as DigtalGardenMetadata;
+				return {
+					created: metadata.created,
+					updated: metadata.updated,
+					title: metadata.title ?? path.basename(filePath, '.md'),
+					link: metadata.permalink,
+					content: lines.slice(3).join('\n')
+				}
+			} catch (e) {
+				console.error(`Error parsing metadata for ${filePath}:`, e);
+				return null;
 			}
+			
 		}
 	}
 	return null
