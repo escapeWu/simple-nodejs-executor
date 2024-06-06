@@ -26,7 +26,7 @@ app.post('/hooks', (req, res) => {
 		return res.status(400).send({ error: 'Shell script not specified in query parameters' });
 	}
 
-	res.status(200).send({ message: 'Script execution scheduled' });
+	
 
 	if (debounceTimeout) {
 		clearTimeout(debounceTimeout);
@@ -36,6 +36,7 @@ app.post('/hooks', (req, res) => {
 		console.log('start execute: ', new Date())
 
 		if (executeType === 'function') {
+			console.log("execute function", executeFnName)
 
 			executeFnName === 'scanPost'
 				? R.pipe(getMarkdownTreeMetadata, batchCreatePost)(scriptDir)
@@ -50,15 +51,14 @@ app.post('/hooks', (req, res) => {
 				if (error) {
 					console.error(`Error executing script: ${error.message}`);
 				}
-
 				if (stderr) {
 					console.error(`Script error: ${stderr}`);
 				}
-
 				console.log(`Script output: ${stdout}`);
 			});
 		}
 	}, 1000 * 10); // 1000ms debounce time
+	return res.status(200).send({ message: 'Script execution scheduled' });
 });
 
 
