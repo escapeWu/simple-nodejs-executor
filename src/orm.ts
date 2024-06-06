@@ -8,3 +8,5 @@ export function batchCreatePost(posts: Post[]){
 			data: posts
 		}))
 }
+
+prisma.post.deleteMany({})

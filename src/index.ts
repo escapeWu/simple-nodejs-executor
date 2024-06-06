@@ -56,12 +56,12 @@ app.post('/hooks', (req, res) => {
 				}
 
 				executeFnName === 'scanPost'
-					? R.pipe(getMarkdownTreeMetadata, batchCreatePost)(scriptDir)
+					? R.pipe(getMarkdownTreeMetadata, batchCreatePost)(path.resolve(scriptDir, "src/site/notes"))
 					: console.log('TODO')
 				console.log(`Script output: ${stdout}`);
 			});
 		}
-	}, 1000 * 10); // 1000ms debounce time
+	}, 1000 * 1); // 1000ms debounce time
 	return res.status(200).send({ message: 'Script execution scheduled' });
 });
 
