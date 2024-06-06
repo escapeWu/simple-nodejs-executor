@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-function walkDir(directory: string, processFn: Function) {
+function walkDir(directory: string, processFn: (filePath: string) => void) {
 	// 读取当前目录下的所有文件和子目录
 	const filesAndDirs = fs.readdirSync(directory);
 

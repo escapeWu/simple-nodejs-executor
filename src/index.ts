@@ -13,6 +13,7 @@ app.use(express.json());
 
 let debounceTimeout: NodeJS.Timeout | null = null;
 
+//@ts-ignore
 app.post('/hooks', (req, res) => {
 	const queryObject = url.parse(req.url, true).query as HookParams;
 	const script = queryObject.shell;
@@ -25,7 +26,7 @@ app.post('/hooks', (req, res) => {
 		return res.status(400).send({ error: 'Shell script not specified in query parameters' });
 	}
 
-	
+	res.status(200).send({ message: 'Script execution scheduled' });
 
 	if (debounceTimeout) {
 		clearTimeout(debounceTimeout);
@@ -58,7 +59,6 @@ app.post('/hooks', (req, res) => {
 			});
 		}
 	}, 1000 * 10); // 1000ms debounce time
-    return res.status(200).send({ message: 'Script execution scheduled' });
 });
 
 
