@@ -54,6 +54,10 @@ app.post('/hooks', (req, res) => {
 				if (stderr) {
 					console.error(`Script error: ${stderr}`);
 				}
+
+				executeFnName === 'scanPost'
+					? R.pipe(getMarkdownTreeMetadata, batchCreatePost)(scriptDir)
+					: console.log('TODO')
 				console.log(`Script output: ${stdout}`);
 			});
 		}
