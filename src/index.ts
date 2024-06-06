@@ -61,7 +61,7 @@ app.post('/hooks', (req, res) => {
 				console.log(`Script output: ${stdout}`);
 			});
 		}
-	}, 1000 * 1); // 1000ms debounce time
+	}, 1000 * 10); // 1000ms debounce time
 	return res.status(200).send({ message: 'Script execution scheduled' });
 });
 
