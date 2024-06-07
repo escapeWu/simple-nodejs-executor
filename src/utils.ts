@@ -29,7 +29,8 @@ function getMarkdownMetaData(filePath: string): Post | null {
 					updated: metadata.updated,
 					title: metadata.title ?? path.basename(filePath, '.md'),
 					link: metadata.permalink,
-					content: lines.slice(3).join('\n')
+					content: lines.slice(3).join('\n'),
+					tags: (metadata.tags ?? []).join(","),
 				}
 			} catch (e) {
 				console.error(`Error parsing metadata for ${filePath}:`, e);

@@ -3,6 +3,7 @@ interface DigtalGardenMetadata {
     permalink: string
     created: string
     updated: string
+    tags: string[]
 }
 
 interface Post {
@@ -11,4 +12,5 @@ interface Post {
     link: string
     created: string
     updated: string
+    tags: string
 }
