@@ -56,7 +56,7 @@ app.post('/hooks', (req, res) => {
 				}
 
 				executeFnName === 'scanPost'
-					? R.pipe(getMarkdownTreeMetadata, batchCreatePost)(scriptDir)
+					? R.pipe(getMarkdownTreeMetadata, batchCreatePost)(path.resolve(scriptDir, "src/site/notes"))
 					: console.log('TODO')
 				console.log(`Script output: ${stdout}`);
 			});
