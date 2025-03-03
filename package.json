@@ -62,7 +62,7 @@
     }
   },
   "dependencies": {
-    "@prisma/client": "^5.22.0",
+    "@prisma/client": "^6.4.1",
     "express": "^4.19.2",
     "prisma": "^6.4.1",
     "ramda": "^0.30.1",
