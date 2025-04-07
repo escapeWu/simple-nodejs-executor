@@ -5,6 +5,10 @@ import path from 'path';
 import { getMarkdownTreeMetadata } from './utils'
 import { batchCreatePost } from './orm'
 import R from 'ramda'
+import logger from './logger'
+import dayjs from 'dayjs';
+
+
 const app = express();
 const port = 7778;
 
@@ -33,14 +37,14 @@ app.post('/hooks', (req, res) => {
 	}
 
 	debounceTimeout = setTimeout(() => {
-		console.log('start execute: ', new Date())
+    logger.info(`Start Execute: ${dayjs().format()}`)
 
 		if (executeType === 'function') {
-			console.log("execute function", executeFnName)
+			logger.info("execute function", executeFnName)
 
 			executeFnName === 'scanPost'
 				? R.pipe(getMarkdownTreeMetadata, batchCreatePost)(scriptDir)
-				: console.log('TODO')
+				: logger.info('TODO')
 
 		} else {
 			// 设置工作目录
@@ -49,16 +53,16 @@ app.post('/hooks', (req, res) => {
 			// Execute the shell script
 			exec(`sh ${script}.sh`, options, (error, stdout, stderr) => {
 				if (error) {
-					console.error(`Error executing script: ${error.message}`);
+					logger.info(`Error executing script: ${error.message}`);
 				}
 				if (stderr) {
-					console.error(`Script error: ${stderr}`);
+					logger.info(`Script error: ${stderr}`);
 				}
 
 				executeFnName === 'scanPost'
 					? R.pipe(getMarkdownTreeMetadata, batchCreatePost)(path.resolve(scriptDir, "src/site/notes"))
-					: console.log('TODO')
-				console.log(`Script output: ${stdout}`);
+					: logger.info('TODO')
+				logger.info(`Script output: ${stdout}`);
 			});
 		}
 	}, 1000 * 10); // 1000ms debounce time
@@ -67,5 +71,5 @@ app.post('/hooks', (req, res) => {
 
 
 app.listen(port, () => {
-	console.log(`Server is listening on port ${port}`);
+	logger.info(`Server is listening on port ${port}`);
 });
