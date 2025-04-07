@@ -5,6 +5,8 @@ import path from 'path';
 import { getMarkdownTreeMetadata } from './utils';
 import { batchCreatePost } from './orm';
 import { v4 as uuidv4 } from 'uuid';
+import logger from './logger';
+
 
 type HookParams = {
   shell?: string;
@@ -51,7 +53,7 @@ const debounceManager = {
   },
 
   log(action: string, context: ExecutionContext) {
-    console.log(formatLog('INFO', action, context));
+    logger.info(formatLog('INFO', action, context));
   }
 };
 
@@ -196,17 +198,17 @@ function formatLog(
 }
 
 function logStart(context: ExecutionContext) {
-  console.log(formatLog('INFO', 'EXECUTION_START', context));
+  logger.info(formatLog('INFO', 'EXECUTION_START', context));
 }
 
 function logSuccess(context: ExecutionContext) {
-  console.log(formatLog('INFO', 'EXECUTION_SUCCESS', context, {
+  logger.info(formatLog('INFO', 'EXECUTION_SUCCESS', context, {
     duration: Date.now() - context.startTime
   }));
 }
 
 function logError(type: string, context: ExecutionContext, error?: Error) {
-  console.error(formatLog('ERROR', type, context, {
+  logger.error(formatLog('ERROR', type, context, {
     error: error ? {
       message: error.message,
       stack: error.stack
@@ -222,7 +224,7 @@ function logProcessOutput(
 ) {
   output.split('\n').forEach(line => {
     if (line.trim()) {
-      console.log(formatLog(level, 'PROCESS_OUTPUT', context, {
+      logger.info(formatLog(level, 'PROCESS_OUTPUT', context, {
         output: line.trim()
       }));
     }
@@ -230,11 +232,11 @@ function logProcessOutput(
 }
 
 function logSubTask(action: string, context: ExecutionContext) {
-  console.log(formatLog('INFO', action, context));
+  logger.info(formatLog('INFO', action, context));
 }
 
 app.listen(port, () => {
-  console.log(formatLog('INFO', 'SERVER_START', {
+  logger.info(formatLog('INFO', 'SERVER_START', {
     requestId: 'SYSTEM',
     startTime: Date.now(),
     params: {}
