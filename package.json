@@ -63,7 +63,6 @@
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
-    "dayjs": "^1.11.13",
     "express": "^4.19.2",
     "log4js": "^6.9.1",
     "prisma": "^6.4.1",

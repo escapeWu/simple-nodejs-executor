@@ -1,0 +1,536 @@
+[2025-04-07T14:33:42.829] [INFO] default - Logger 启动
+[2025-04-07T14:33:42.836] [INFO] default - 服务启动，端口： 7778
+[2025-04-07T14:34:39.747] [INFO] default - Start Execute
+[2025-04-07T14:35:24.599] [INFO] default - Script error: From https://github.com/escapeWu/knowledge-base
+   66a734f..c60a8f0  main       -> origin/main
+ Container digital-garden  Stopping
+ Container digital-garden  Stopped
+ Container digital-garden  Removing
+ Container digital-garden  Removed
+ Network knowledge-base_default  Removing
+ Network knowledge-base_default  Removed
+ web  Built
+ Network knowledge-base_default  Creating
+ Network knowledge-base_default  Created
+ Container digital-garden  Creating
+ Container digital-garden  Created
+ Container digital-garden  Starting
+ Container digital-garden  Started
+
+[2025-04-07T14:35:24.600] [INFO] default - TODO
+[2025-04-07T14:35:24.600] [INFO] default - Script output: Updating 66a734f..c60a8f0
+Fast-forward
+ src/site/notes/index.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compose now can delegate build to bake for better performances
+Just set COMPOSE_BAKE=true
+#0 building with "default" instance using docker driver
+
+#1 [web internal] load build definition from Dockerfile
+#1 transferring dockerfile: 520B done
+#1 DONE 0.0s
+
+#2 [web internal] load metadata for docker.io/shancw/digital-garden-base:latest
+#2 ...
+
+#3 [web auth] shancw/digital-garden-base:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [web auth] library/nginx:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [web internal] load metadata for docker.io/library/nginx:1.27.3
+#5 DONE 4.6s
+
+#2 [web internal] load metadata for docker.io/shancw/digital-garden-base:latest
+#2 DONE 4.8s
+
+#6 [web internal] load .dockerignore
+#6 transferring context: 53B done
+#6 DONE 0.0s
+
+#7 [web builder 1/4] FROM docker.io/shancw/digital-garden-base:latest@sha256:7bd6c9057cad2aef3d22a3c2867486be1d1c9d5260ec842aaa1c67f1f2fc5898
+#7 DONE 0.0s
+
+#8 [web stage-1 1/3] FROM docker.io/library/nginx:1.27.3@sha256:bc2f6a7c8ddbccf55bdb19659ce3b0a92ca6559e86d42677a5a02ef6bda2fcef
+#8 DONE 0.0s
+
+#9 [web internal] load build context
+#9 transferring context: 152.01kB 0.1s done
+#9 DONE 0.1s
+
+#10 [web builder 2/4] WORKDIR /build
+#10 CACHED
+
+#11 [web builder 3/4] COPY . .
+#11 DONE 0.4s
+
+#12 [web builder 4/4] RUN npm run build
+#12 0.853 
+#12 0.853 > web@1.0.0 build
+#12 0.853 > npm-run-all get-theme build:*
+#12 0.853 
+#12 1.301 
+#12 1.301 > web@1.0.0 get-theme
+#12 1.301 > node src/site/get-theme.js
+#12 1.301 
+#12 5.274 
+#12 5.274 > web@1.0.0 build:eleventy
+#12 5.274 > cross-env ELEVENTY_ENV=prod NODE_OPTIONS=--max-old-space-size=4096 eleventy
+#12 5.274 
+#12 10.76 [11ty] Writing dist/404/index.html from ./src/site/404.njk
+#12 10.76 [11ty] Writing dist/feed.xml from ./src/site/feed.njk
+#12 10.76 [11ty] Writing dist/searchIndex.json from ./src/site/search-index.njk
+#12 10.76 [11ty] Writing dist/sitemap.xml from ./src/site/sitemap.njk
+#12 10.76 [11ty] Writing dist/graph.json from ./src/site/graph.njk
+#12 19.77 [11ty] Writing dist/04-algo/1071-greatest-common-divisor-of-strings/index.html from ./src/site/notes/04-algo/1071.Greatest-common Divisor of Strings.md
+#12 19.80 [11ty] Writing dist/02-backend/spring-mybatis/index.html from ./src/site/notes/02-backend/spring + mybatis 自动化更新时间字段.md
+#12 19.92 [11ty] Writing dist/03-projects/file-chunk-upload-compose/index.html from ./src/site/notes/03-Projects/file-chunk-upload-compose.md
+#12 19.95 [11ty] Writing dist/04-algo/189/index.html from ./src/site/notes/04-algo/189轮转数组.md
+#12 20.03 [11ty] Writing dist/04-algo/122-best-time-to-buy-and-sell-stock-ii/index.html from ./src/site/notes/04-algo/122-best-time-to-buy-and-sell-stock-ii.md
+#12 20.11 [11ty] Writing dist/04-algo/26/index.html from ./src/site/notes/04-algo/26删除有序数组中的重复项.md
+#12 20.16 [11ty] Writing dist/04-algo/238-product-of-array-except-self/index.html from ./src/site/notes/04-algo/238-product-of-array-Except Self.md
+#12 20.24 [11ty] Writing dist/02-backend/nacos-mysql-springboot-docker/index.html from ./src/site/notes/02-backend/nacos_mysql_springboot_docker.md
+#12 20.30 [11ty] Writing dist/04-algo/binary-tree-type/index.html from ./src/site/notes/04-algo/binary-tree type.md
+#12 20.34 [11ty] Writing dist/02-backend/index/index.html from ./src/site/notes/02-backend/index.md
+#12 20.38 [11ty] Writing dist/04-algo/150merge-sorted-array/index.html from ./src/site/notes/04-algo/150merge-sorted-array.md
+#12 20.41 [11ty] Writing dist/04-algo/list/index.html from ./src/site/notes/04-algo/list.md
+#12 20.46 [11ty] Writing dist/04-algo/skill-gcd-and-lcm/index.html from ./src/site/notes/04-algo/skill-gcd-and-lcm.md
+#12 20.48 [11ty] Writing dist/07-life/karabiner-elements-mouse-mapping/index.html from ./src/site/notes/07-Life/karabiner-elements mouse mapping.md
+#12 20.51 [11ty] Writing dist/04-algo/121best-time-to-buy-and-sell-stock/index.html from ./src/site/notes/04-algo/121best-time-to-buy-and-sell-stock.md
+#12 20.60 [11ty] Writing dist/07-life/digtal-garden-and-github-webhook/index.html from ./src/site/notes/07-Life/digtal-garden & github webhook 本地自动化部署.md
+#12 20.68 [11ty] Writing dist/07-life/dg-workflow/index.html from ./src/site/notes/07-Life/dg-workflow.md
+#12 20.72 [11ty] Writing dist/07-life/nextcloud-self-host/index.html from ./src/site/notes/07-Life/nextcloud-self-host.md
+#12 20.76 [11ty] Writing dist/07-life/x-ui/index.html from ./src/site/notes/07-Life/x-ui.md
+#12 20.79 [11ty] Writing dist/01-frontend/html-and-css/css-fixed-aspect-radio/index.html from ./src/site/notes/01-frontend/HTML&CSS/css fixed-aspect-radio.md
+#12 20.84 [11ty] Writing dist/01-frontend/html-and-css/css/index.html from ./src/site/notes/01-frontend/HTML&CSS/CSS-选择器.md
+#12 20.92 [11ty] Writing dist/01-frontend/html-and-css/html-and-css-basic/index.html from ./src/site/notes/01-frontend/HTML&CSS/HTML & CSS Basic.md
+#12 20.97 [11ty] Writing dist/01-frontend/html-and-css/css-media-query/index.html from ./src/site/notes/01-frontend/HTML&CSS/css media query.md
+#12 21.01 [11ty] Writing dist/01-frontend/html-and-css/css-pseudo-elements-class/index.html from ./src/site/notes/01-frontend/HTML&CSS/css-pseudo-elements-class.md
+#12 21.05 [11ty] Writing dist/01-frontend/html-and-css/css3-multi-background/index.html from ./src/site/notes/01-frontend/HTML&CSS/css3-multi-background.md
+#12 21.09 [11ty] Writing dist/01-frontend/html-and-css/css-z-index/index.html from ./src/site/notes/01-frontend/HTML&CSS/css-z-index.md
+#12 21.13 [11ty] Writing dist/01-frontend/html-and-css/css-bfc/index.html from ./src/site/notes/01-frontend/HTML&CSS/css浮动 与 BFC.md
+#12 21.17 [11ty] Writing dist/01-frontend/html-and-css/encode-uri-and-encode-uri-component/index.html from ./src/site/notes/01-frontend/HTML&CSS/encodeURI&encodeURIComponent.md
+#12 21.20 [11ty] Writing dist/01-frontend/html-and-css/css-hide-element/index.html from ./src/site/notes/01-frontend/HTML&CSS/css hide element.md
+#12 21.25 [11ty] Writing dist/01-frontend/html-and-css/css-flex/index.html from ./src/site/notes/01-frontend/HTML&CSS/css-flex.md
+#12 21.28 [11ty] Writing dist/01-frontend/html-and-css/css-layout-unit/index.html from ./src/site/notes/01-frontend/HTML&CSS/css-layout-unit.md
+#12 21.31 [11ty] Writing dist/01-frontend/html-and-css/html-input/index.html from ./src/site/notes/01-frontend/HTML&CSS/html-input.md
+#12 21.35 [11ty] Writing dist/01-frontend/html-and-css/html5-semantic-elements/index.html from ./src/site/notes/01-frontend/HTML&CSS/html5-semantic-elements.md
+#12 21.40 [11ty] Writing dist/01-frontend/html-and-css/form/index.html from ./src/site/notes/01-frontend/HTML&CSS/form表单.md
+#12 21.45 [11ty] Writing dist/01-frontend/html-and-css/tailwindcss-tips/index.html from ./src/site/notes/01-frontend/HTML&CSS/tailwindcss-tips.md
+#12 21.49 [11ty] Writing dist/01-frontend/html-and-css/position-relative-and-static/index.html from ./src/site/notes/01-frontend/HTML&CSS/position relative&static.md
+#12 21.58 [11ty] Writing dist/01-frontend/html-and-css/transition-vs-animation/index.html from ./src/site/notes/01-frontend/HTML&CSS/transition vs animation.md
+#12 21.63 [11ty] Writing dist/01-frontend/js/es-module-vs-common-js/index.html from ./src/site/notes/01-frontend/JS/ES-Module Vs CommonJS.md
+#12 21.66 [11ty] Writing dist/01-frontend/html-and-css/why-translate-instead-of-position/index.html from ./src/site/notes/01-frontend/HTML&CSS/why-translate-instead-of-position.md
+#12 21.71 [11ty] Writing dist/01-frontend/js/event-capture-and-event-bubbling/index.html from ./src/site/notes/01-frontend/JS/EventCapture&EventBubbling.md
+#12 21.73 [11ty] Writing dist/01-frontend/js/file-reader-api/index.html from ./src/site/notes/01-frontend/JS/FileReader API.md
+#12 21.76 [11ty] Writing dist/01-frontend/js/async-foreach-and-for-loop/index.html from ./src/site/notes/01-frontend/JS/async foreach and for loop.md
+#12 21.79 [11ty] Writing dist/01-frontend/js/debounce-and-throttle/index.html from ./src/site/notes/01-frontend/JS/debounce&throttle.md
+#12 21.84 [11ty] Writing dist/01-frontend/js/basic/index.html from ./src/site/notes/01-frontend/JS/basic.md
+#12 21.87 [11ty] Writing dist/01-frontend/js/object-apis/index.html from ./src/site/notes/01-frontend/JS/Object apis.md
+#12 21.90 [11ty] Writing dist/01-frontend/js/date/index.html from ./src/site/notes/01-frontend/JS/date.md
+#12 21.94 [11ty] Writing dist/01-frontend/js/event-loop/index.html from ./src/site/notes/01-frontend/JS/eventLoop.md
+#12 21.97 [11ty] Writing dist/01-frontend/js/forbidden-object-modify/index.html from ./src/site/notes/01-frontend/JS/forbidden object modify.md
+#12 22.00 [11ty] Writing dist/01-frontend/js/js-array-apis/index.html from ./src/site/notes/01-frontend/JS/js-array apis.md
+#12 22.03 [11ty] Writing dist/01-frontend/js/js-proxy-api/index.html from ./src/site/notes/01-frontend/JS/js-proxy api.md
+#12 22.06 [11ty] Writing dist/01-frontend/js/js-iterator/index.html from ./src/site/notes/01-frontend/JS/js-iterator.md
+#12 22.15 [11ty] Writing dist/01-frontend/js/lexical-context-closure/index.html from ./src/site/notes/01-frontend/JS/lexical-context-closure.md
+#12 22.19 [11ty] Writing dist/01-frontend/js/new-underhood/index.html from ./src/site/notes/01-frontend/JS/new underhood.md
+#12 22.22 [11ty] Writing dist/01-frontend/react/react-core/index.html from ./src/site/notes/01-frontend/React/React Core.md
+#12 22.25 [11ty] Writing dist/01-frontend/js/try-catch/index.html from ./src/site/notes/01-frontend/JS/try-catch.md
+#12 22.29 [11ty] Writing dist/01-frontend/react/custom-hook-use-hot-key/index.html from ./src/site/notes/01-frontend/React/custom hook - useHotKey.md
+#12 22.32 [11ty] Writing dist/01-frontend/js/ways-to-create-object/index.html from ./src/site/notes/01-frontend/JS/ways-to-create-object.md
+#12 22.36 [11ty] Writing dist/01-frontend/js/and/index.html from ./src/site/notes/01-frontend/JS/原型&原型链.md
+#12 22.39 [11ty] Writing dist/01-frontend/js/deepclone/index.html from ./src/site/notes/01-frontend/JS/deepclone.md
+#12 22.44 [11ty] Writing dist/01-frontend/react/electronjs-kylin-build-hello-world/index.html from ./src/site/notes/01-frontend/React/electronjs-kylin-build-hello-world.md
+#12 22.49 [11ty] Writing dist/01-frontend/react/what-are-react-server-components-rs-cs/index.html from ./src/site/notes/01-frontend/React/What are React Server Components(RSCs).md
+#12 22.53 [11ty] Writing dist/01-frontend/react/tailwind-merge-class/index.html from ./src/site/notes/01-frontend/React/tailwind-merge 解决class 重复.md
+#12 22.56 [11ty] Writing dist/01-frontend/react/react-router-basic/index.html from ./src/site/notes/01-frontend/React/ReactRouter Basic.md
+#12 22.59 [11ty] Writing dist/01-frontend/react/use-reducer-state-manage/index.html from ./src/site/notes/01-frontend/React/useReducer state manage.md
+#12 22.64 [11ty] Writing dist/01-frontend/vue/vue-core/index.html from ./src/site/notes/01-frontend/Vue/Vue Core.md
+#12 22.67 [11ty] Writing dist/01-frontend/react/virual-dom/index.html from ./src/site/notes/01-frontend/React/virual-dom.md
+#12 22.71 [11ty] Writing dist/01-frontend/vue/vue-basic/index.html from ./src/site/notes/01-frontend/Vue/vue-basic.md
+#12 22.75 [11ty] Writing dist/01-frontend/vue/vue-async-component/index.html from ./src/site/notes/01-frontend/Vue/vue-AsyncComponent.md
+#12 22.78 [11ty] Writing dist/01-frontend/vue/vue-keep-alive/index.html from ./src/site/notes/01-frontend/Vue/vue-keep-alive.md
+#12 22.81 [11ty] Writing dist/01-frontend/vue/vue-slot/index.html from ./src/site/notes/01-frontend/Vue/vue-slot.md
+#12 22.84 [11ty] Writing dist/01-frontend/vue/vue3-reactive/index.html from ./src/site/notes/01-frontend/Vue/vue3-reactive.md
+#12 22.87 [11ty] Writing dist/01-frontend/vue/vue-next-tick/index.html from ./src/site/notes/01-frontend/Vue/vue-nextTick.md
+#12 22.90 [11ty] Writing dist/01-frontend/vue/vue-router/index.html from ./src/site/notes/01-frontend/Vue/vue-router.md
+#12 22.93 [11ty] Writing dist/01-frontend/vue/nuxt-vue-deploy-diff/index.html from ./src/site/notes/01-frontend/Vue/nuxt vue deploy diff.md
+#12 22.96 [11ty] Writing dist/01-frontend/vue/vue2-basic/index.html from ./src/site/notes/01-frontend/Vue/vue2-basic.md
+#12 22.99 [11ty] Writing dist/01-frontend/vue/vue2-reactive/index.html from ./src/site/notes/01-frontend/Vue/vue2-reactive.md
+#12 23.02 [11ty] Writing dist/01-frontend/browser/brower-process-thread-list/index.html from ./src/site/notes/01-frontend/browser/brower-process-thread-list.md
+#12 23.05 [11ty] Writing dist/01-frontend/browser/web-storage/index.html from ./src/site/notes/01-frontend/browser/web storage 鍓嶇瀛樺偍鏂规.md
+#12 23.09 [11ty] Writing dist/01-frontend/browser/web-worker/index.html from ./src/site/notes/01-frontend/browser/web-worker.md
+#12 23.12 [11ty] Writing dist/01-frontend/build/webpack-package/index.html from ./src/site/notes/01-frontend/build/webpack package.md
+#12 23.15 [11ty] Writing dist/01-frontend/network/cdn-tech/index.html from ./src/site/notes/01-frontend/network/CDN-tech.md
+#12 23.18 [11ty] Writing dist/01-frontend/build/webpack-splitchunks/index.html from ./src/site/notes/01-frontend/build/webpack-splitchunks.md
+#12 23.21 [11ty] Writing dist/01-frontend/build/webpack-vite-diff/index.html from ./src/site/notes/01-frontend/build/webpack-vite-diff.md
+#12 23.25 [11ty] Writing dist/01-frontend/network/osi-model-networking-layer/index.html from ./src/site/notes/01-frontend/network/OSI-model-networking-layer.md
+#12 23.34 [11ty] Writing dist/01-frontend/network/http1-x-http2/index.html from ./src/site/notes/01-frontend/network/http1.x-http2.md
+#12 23.37 [11ty] Writing dist/01-frontend/network/cache-control/index.html from ./src/site/notes/01-frontend/network/cache-control.md
+#12 23.41 [11ty] Writing dist/01-frontend/network/cookie/index.html from ./src/site/notes/01-frontend/network/cookie.md
+#12 23.46 [11ty] Writing dist/01-frontend/network/net-cache/index.html from ./src/site/notes/01-frontend/network/net-cache.md
+#12 23.50 [11ty] Writing dist/01-frontend/network/net-status-304/index.html from ./src/site/notes/01-frontend/network/net-status-304.md
+#12 23.54 [11ty] Writing dist/01-frontend/network/refresh-token-and-access-token/index.html from ./src/site/notes/01-frontend/network/refresh-token&access-token.md
+#12 23.56 [11ty] Writing dist/01-frontend/network/octet-stream-header/index.html from ./src/site/notes/01-frontend/network/octet-stream header.md
+#12 23.61 [11ty] Writing dist/01-frontend/network/same-origin-related/index.html from ./src/site/notes/01-frontend/network/same-origin related.md
+#12 23.64 [11ty] Writing dist/01-frontend/nodejs/commander-js-usage/index.html from ./src/site/notes/01-frontend/nodejs/commander.js usage.md
+#12 23.67 [11ty] Writing dist/01-frontend/ts/ts-object-key-value-subtype/index.html from ./src/site/notes/01-frontend/ts/ts-object-key-value-subtype.md
+#12 23.70 [11ty] Writing dist/01-frontend/nodejs/process-next-tick/index.html from ./src/site/notes/01-frontend/nodejs/process.nextTick.md
+#12 23.73 [11ty] Writing dist/01-frontend/utils/indexed-db-crud/index.html from ./src/site/notes/01-frontend/utils/IndexedDB_CRUD.md
+#12 23.76 [11ty] Writing dist/01-frontend/utils/imglist-zip/index.html from ./src/site/notes/01-frontend/utils/imglist - zip.md
+#12 23.79 [11ty] Writing dist/01-frontend/utils/utils-promise-concurrent/index.html from ./src/site/notes/01-frontend/utils/utils-promise-concurrent.md
+#12 23.82 [11ty] Writing dist/01-frontend/utils/utils-lazy-load/index.html from ./src/site/notes/01-frontend/utils/utils-lazyLoad.md
+#12 23.86 [11ty] Writing dist/01-frontend/utils/utils-tree-map/index.html from ./src/site/notes/01-frontend/utils/utils-tree-map.md
+#12 23.89 [11ty] Writing dist/02-backend/db/liquibase-lock/index.html from ./src/site/notes/02-backend/db/liquibase lock删除.md
+#12 23.92 [11ty] Writing dist/01-frontend/utils/utils-tree-list-to-tree/index.html from ./src/site/notes/01-frontend/utils/utils - treeList to tree.md
+#12 23.95 [11ty] Writing dist/02-backend/idea/idea-maven/index.html from ./src/site/notes/02-backend/idea/idea_maven 修改 阿里源.md
+#12 23.99 [11ty] Writing dist/02-backend/cloud/nacos-multiple-config/index.html from ./src/site/notes/02-backend/cloud/nacos_multiple_config.md
+#12 24.02 [11ty] Writing dist/01-frontend/utils/utils-tree-path-find/index.html from ./src/site/notes/01-frontend/utils/utils-tree path find.md
+#12 24.05 [11ty] Writing dist/02-backend/java/jabba-jdk-windows/index.html from ./src/site/notes/02-backend/java/jabba管理jdk-windows.md
+#12 24.08 [11ty] Writing dist/02-backend/java/java-enum/index.html from ./src/site/notes/02-backend/java/java enum-字符串.md
+#12 24.10 [11ty] Writing dist/02-backend/maven/maven-win/index.html from ./src/site/notes/02-backend/maven/maven 安装 -win - 翻译.md
+#12 24.13 [11ty] Writing dist/02-backend/utils/copy-properties-skip-null/index.html from ./src/site/notes/02-backend/utils/copyProperties skip null.md
+#12 24.16 [11ty] Writing dist/03-projects/pdf-notes/pdf-web-frame-work-brain-storm/index.html from ./src/site/notes/03-Projects/PDF_Notes/PDF-web-frameWork-brainStorm.md
+#12 24.19 [11ty] Writing dist/03-projects/ai-visual/yolo-augument/index.html from ./src/site/notes/03-Projects/ai-visual/YoloAugument.md
+#12 24.23 [11ty] Writing dist/03-projects/ai-visual/aimbot-install-guide/index.html from ./src/site/notes/03-Projects/ai-visual/aimbot install guide.md
+#12 24.26 [11ty] Writing dist/02-backend/utils/java-thread-pool/index.html from ./src/site/notes/02-backend/utils/java-thread-pool.md
+#12 24.29 [11ty] Writing dist/03-projects/ai-visual/onnxruntime-directml-pred-demo/index.html from ./src/site/notes/03-Projects/ai-visual/onnxruntime-directml-pred-demo.md
+#12 24.32 [11ty] Writing dist/03-projects/ai-visual/tensor-rt/index.html from ./src/site/notes/03-Projects/ai-visual/tensorRT 安装使用.md
+#12 24.35 [11ty] Writing dist/03-projects/ai-visual/yolov8-tensor-rt-c/index.html from ./src/site/notes/03-Projects/ai-visual/yolov8-tensorRT c++加速.md
+#12 24.38 [11ty] Writing dist/03-projects/ai-visual/cudnn-windows-install/index.html from ./src/site/notes/03-Projects/ai-visual/cudnn windows install安装.md
+#12 24.41 [11ty] Writing dist/06-tools/docker/docker-networking-in-compose/index.html from ./src/site/notes/06-Tools/Docker/docker Networking in Compose.md
+#12 24.44 [11ty] Writing dist/06-tools/docker/docker-multi-stage/index.html from ./src/site/notes/06-Tools/Docker/Docker-multi-stage.md
+#12 24.46 [11ty] Writing dist/04-algo/recursion/array-flatten/index.html from ./src/site/notes/04-algo/recursion/array flatten.md
+#12 24.49 [11ty] Writing dist/06-tools/docker/docker-media-all-in-one/index.html from ./src/site/notes/06-Tools/Docker/docker media-all-in-one 一站式家庭影院.md
+#12 24.52 [11ty] Writing dist/02-backend/utils/java-execute-bash/index.html from ./src/site/notes/02-backend/utils/Java-execute-bash 指令.md
+#12 24.56 [11ty] Writing dist/06-tools/obsidian/digital-garden-excalidraw-usage/index.html from ./src/site/notes/06-Tools/Obsidian/digital-garden excalidraw usage.md
+#12 24.60 [11ty] Writing dist/06-tools/docker/docker/index.html from ./src/site/notes/06-Tools/Docker/docker 入门使用.md
+#12 24.62 [11ty] Writing dist/06-tools/docker/docker-compose-depends-on/index.html from ./src/site/notes/06-Tools/Docker/docker-compose depends on.md
+#12 24.66 [11ty] Writing dist/06-tools/docker/network/index.html from ./src/site/notes/06-Tools/Docker/network.md
+#12 24.70 [11ty] Writing dist/06-tools/git/git-common/index.html from ./src/site/notes/06-Tools/Git/Git Common.md
+#12 24.73 [11ty] Writing dist/06-tools/python/python-file-operation/index.html from ./src/site/notes/06-Tools/Python/Python File Operation.md
+#12 24.75 [11ty] Writing dist/06-tools/ci-cd/din-d/index.html from ./src/site/notes/06-Tools/ci-cd/DinD.md
+#12 24.78 [11ty] Writing dist/06-tools/python/coroutine-and-threading-all-in-one/index.html from ./src/site/notes/06-Tools/Python/coroutine and threading all in one.md
+#12 24.81 [11ty] Writing dist/06-tools/python/index/index.html from ./src/site/notes/06-Tools/Python/index.md
+#12 24.83 [11ty] Writing dist/06-tools/python/python-folder-api/index.html from ./src/site/notes/06-Tools/Python/Python Folder Api操作.md
+#12 24.86 [11ty] Writing dist/06-tools/cloudflare/site-speed-optimize-with-cloudflare/index.html from ./src/site/notes/06-Tools/cloudflare/site-speed-optimize-with-cloudflare.md
+#12 24.89 [11ty] Writing dist/06-tools/linux/vm-ubuntu-add-extra-disk-space/index.html from ./src/site/notes/06-Tools/linux/VM ubuntu add extra disk space.md
+#12 24.92 [11ty] Writing dist/06-tools/ci-cd/gitlab-cicd/index.html from ./src/site/notes/06-Tools/ci-cd/gitlab-CICD.md
+#12 24.95 [11ty] Writing dist/06-tools/nignx/acme-sh-auto-cert/index.html from ./src/site/notes/06-Tools/nignx/acme.sh auto cert.md
+#12 24.99 [11ty] Writing dist/06-tools/nignx/nginx-frontend-spa-page-not-found/index.html from ./src/site/notes/06-Tools/nignx/nginx-frontend-SPA-page-not-found.md
+#12 25.02 [11ty] Writing dist/06-tools/linux/tar-cmd/index.html from ./src/site/notes/06-Tools/linux/tar cmd.md
+#12 25.05 [11ty] Writing dist/06-tools/windows/kms-activate/index.html from ./src/site/notes/06-Tools/windows/kms-activate.md
+#12 25.08 [11ty] Writing dist/06-tools/nignx/nginx-proxy-manager-custom-conf/index.html from ./src/site/notes/06-Tools/nignx/nginx-proxy-manager-custom-conf.md
+#12 25.10 [11ty] Writing dist/06-tools/nignx/uri-url-diff/index.html from ./src/site/notes/06-Tools/nignx/uri-url diff.md
+#12 25.16 [11ty] Writing dist/cursor-keyboard-shortcut/index.html from ./src/site/notes/备忘录/开发/cursor-keyboard-shortcut.md
+#12 25.19 [11ty] Writing dist/06-tools/nignx/proxy-pass-uri-rewrite/index.html from ./src/site/notes/06-Tools/nignx/proxy-pass uri rewrite.md
+#12 25.22 [11ty] Writing dist/01-frontend/react/core-react/react-hook-closure-trap/index.html from ./src/site/notes/01-frontend/React/Core React/React Hook closure Trap.md
+#12 25.25 [11ty] Writing dist/01-frontend/react/core-react/how-to-make-request-inside-use-effect/index.html from ./src/site/notes/01-frontend/React/Core React/how to make request inside useEffect.md
+#12 25.28 [11ty] Writing dist/01-frontend/react/core-react/react-lazy-load/index.html from ./src/site/notes/01-frontend/React/Core React/React Lazy Load.md
+#12 25.31 [11ty] Writing dist/01-frontend/react/core-react/react-basic/index.html from ./src/site/notes/01-frontend/React/Core React/react basic.md
+#12 25.33 [11ty] Writing dist/01-frontend/react/core-react/react-component-commulucation/index.html from ./src/site/notes/01-frontend/React/Core React/react-component-commulucation.md
+#12 25.36 [11ty] Writing dist/01-frontend/react/core-react/use-callback-use-memo-react-memo/index.html from ./src/site/notes/01-frontend/React/Core React/useCallback, useMemo, React.memo.md
+#12 25.39 [11ty] Writing dist/01-frontend/react/next-js-docs/next-js-cheat-sheet/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/NextJS CheatSheet.md
+#12 25.59 [11ty] Writing dist/01-frontend/react/next-js-docs/next-js-route-walkthrough/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/NextJS Route walkthrough.md
+#12 25.65 [11ty] Writing dist/01-frontend/react/next-js-docs/what-are-react-server-components-rs-cs/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/What are React Server Components(RSCs).md
+#12 25.70 [11ty] Writing dist/01-frontend/build/npm/package-json-cheatsheet/index.html from ./src/site/notes/01-frontend/build/npm/package.json cheatsheet.md
+#12 25.72 [11ty] Writing dist/02-backend/java/java-string-string-buffer-string-builder/index.html from ./src/site/notes/02-backend/java/基础/Java - String, StringBuffer, StringBuilder.md
+#12 25.75 [11ty] Writing dist/01-frontend/build/npm/semver-versioning/index.html from ./src/site/notes/01-frontend/build/npm/semver versioning.md
+#12 25.78 [11ty] Writing dist/01-frontend/react/next-js-docs/data-fetching/get-static-props/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/Data Fetching/getStaticProps.md
+#12 25.82 [11ty] Writing dist/01-frontend/react/next-js-docs/data-fetching/get-server-side-props/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/Data Fetching/getServerSideProps.md
+#12 25.89 [11ty] Writing dist/index.html from ./src/site/notes/index.md
+#12 27.56 [11ty] Copied 99 files / Wrote 163 files in 20.56 seconds (126.1ms each, v2.0.1)
+#12 28.06 
+#12 28.06 > web@1.0.0 build:sass
+#12 28.06 > sass src/site/styles:dist/styles --style compressed
+#12 28.06 
+#12 29.73 npm notice
+#12 29.73 npm notice New major version of npm available! 10.8.2 -> 11.2.0
+#12 29.73 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.2.0
+#12 29.73 npm notice To update run: npm install -g npm@11.2.0
+#12 29.73 npm notice
+#12 DONE 29.8s
+
+#8 [web stage-1 1/3] FROM docker.io/library/nginx:1.27.3@sha256:bc2f6a7c8ddbccf55bdb19659ce3b0a92ca6559e86d42677a5a02ef6bda2fcef
+#8 CACHED
+
+#13 [web stage-1 2/3] COPY --from=builder /build/dist /usr/share/nginx/html
+#13 DONE 0.3s
+
+#14 [web stage-1 3/3] COPY nginx.conf /etc/nginx/conf.d/default.conf
+#14 DONE 0.1s
+
+#15 [web] exporting to image
+#15 exporting layers
+#15 exporting layers 0.6s done
+#15 writing image sha256:404c206576f424bf3b543e13b53a8da3482d8ccdf144dbf52c92b693a0d0384c done
+#15 naming to docker.io/library/knowledge-base-web 0.0s done
+#15 DONE 0.6s
+
+#16 [web] resolving provenance for metadata file
+#16 DONE 0.0s
+
+[2025-04-07T14:36:16.799] [INFO] default - Start Execute
+[2025-04-07T14:37:04.194] [INFO] default - Script error:  Container digital-garden  Stopping
+ Container digital-garden  Stopped
+ Container digital-garden  Removing
+ Container digital-garden  Removed
+ Network knowledge-base_default  Removing
+ Network knowledge-base_default  Removed
+ web  Built
+ Network knowledge-base_default  Creating
+ Network knowledge-base_default  Created
+ Container digital-garden  Creating
+ Container digital-garden  Created
+ Container digital-garden  Starting
+ Container digital-garden  Started
+
+[2025-04-07T14:37:04.232] [INFO] default - Script output: Already up to date.
+Compose now can delegate build to bake for better performances
+Just set COMPOSE_BAKE=true
+#0 building with "default" instance using docker driver
+
+#1 [web internal] load build definition from Dockerfile
+#1 transferring dockerfile: 520B done
+#1 DONE 0.0s
+
+#2 [web internal] load metadata for docker.io/shancw/digital-garden-base:latest
+#2 ...
+
+#3 [web internal] load metadata for docker.io/library/nginx:1.27.3
+#3 DONE 2.3s
+
+#2 [web internal] load metadata for docker.io/shancw/digital-garden-base:latest
+#2 DONE 6.7s
+
+#4 [web internal] load .dockerignore
+#4 transferring context: 53B done
+#4 DONE 0.0s
+
+#5 [web builder 1/4] FROM docker.io/shancw/digital-garden-base:latest@sha256:7bd6c9057cad2aef3d22a3c2867486be1d1c9d5260ec842aaa1c67f1f2fc5898
+#5 DONE 0.0s
+
+#6 [web stage-1 1/3] FROM docker.io/library/nginx:1.27.3@sha256:bc2f6a7c8ddbccf55bdb19659ce3b0a92ca6559e86d42677a5a02ef6bda2fcef
+#6 DONE 0.0s
+
+#7 [web internal] load build context
+#7 transferring context: 99.28kB 0.1s done
+#7 DONE 0.1s
+
+#8 [web builder 2/4] WORKDIR /build
+#8 CACHED
+
+#9 [web builder 3/4] COPY . .
+#9 DONE 0.5s
+
+#10 [web builder 4/4] RUN npm run build
+#10 1.012 
+#10 1.012 > web@1.0.0 build
+#10 1.012 > npm-run-all get-theme build:*
+#10 1.012 
+#10 1.555 
+#10 1.555 > web@1.0.0 get-theme
+#10 1.555 > node src/site/get-theme.js
+#10 1.555 
+#10 5.877 
+#10 5.877 > web@1.0.0 build:eleventy
+#10 5.877 > cross-env ELEVENTY_ENV=prod NODE_OPTIONS=--max-old-space-size=4096 eleventy
+#10 5.877 
+#10 9.922 [11ty] Writing dist/404/index.html from ./src/site/404.njk
+#10 9.923 [11ty] Writing dist/feed.xml from ./src/site/feed.njk
+#10 9.923 [11ty] Writing dist/graph.json from ./src/site/graph.njk
+#10 9.923 [11ty] Writing dist/searchIndex.json from ./src/site/search-index.njk
+#10 9.931 [11ty] Writing dist/sitemap.xml from ./src/site/sitemap.njk
+#10 17.45 [11ty] Writing dist/index.html from ./src/site/notes/index.md
+#10 17.52 [11ty] Writing dist/04-algo/150merge-sorted-array/index.html from ./src/site/notes/04-algo/150merge-sorted-array.md
+#10 17.58 [11ty] Writing dist/04-algo/1071-greatest-common-divisor-of-strings/index.html from ./src/site/notes/04-algo/1071.Greatest-common Divisor of Strings.md
+#10 17.65 [11ty] Writing dist/04-algo/238-product-of-array-except-self/index.html from ./src/site/notes/04-algo/238-product-of-array-Except Self.md
+#10 17.75 [11ty] Writing dist/04-algo/122-best-time-to-buy-and-sell-stock-ii/index.html from ./src/site/notes/04-algo/122-best-time-to-buy-and-sell-stock-ii.md
+#10 17.90 [11ty] Writing dist/03-projects/file-chunk-upload-compose/index.html from ./src/site/notes/03-Projects/file-chunk-upload-compose.md
+#10 17.94 [11ty] Writing dist/04-algo/26/index.html from ./src/site/notes/04-algo/26删除有序数组中的重复项.md
+#10 17.98 [11ty] Writing dist/04-algo/189/index.html from ./src/site/notes/04-algo/189轮转数组.md
+#10 18.03 [11ty] Writing dist/04-algo/121best-time-to-buy-and-sell-stock/index.html from ./src/site/notes/04-algo/121best-time-to-buy-and-sell-stock.md
+#10 18.07 [11ty] Writing dist/04-algo/list/index.html from ./src/site/notes/04-algo/list.md
+#10 18.13 [11ty] Writing dist/04-algo/binary-tree-type/index.html from ./src/site/notes/04-algo/binary-tree type.md
+#10 18.18 [11ty] Writing dist/04-algo/skill-gcd-and-lcm/index.html from ./src/site/notes/04-algo/skill-gcd-and-lcm.md
+#10 18.23 [11ty] Writing dist/07-life/x-ui/index.html from ./src/site/notes/07-Life/x-ui.md
+#10 18.27 [11ty] Writing dist/07-life/karabiner-elements-mouse-mapping/index.html from ./src/site/notes/07-Life/karabiner-elements mouse mapping.md
+#10 18.32 [11ty] Writing dist/02-backend/nacos-mysql-springboot-docker/index.html from ./src/site/notes/02-backend/nacos_mysql_springboot_docker.md
+#10 18.40 [11ty] Writing dist/07-life/digtal-garden-and-github-webhook/index.html from ./src/site/notes/07-Life/digtal-garden & github webhook 本地自动化部署.md
+#10 18.51 [11ty] Writing dist/01-frontend/html-and-css/html-and-css-basic/index.html from ./src/site/notes/01-frontend/HTML&CSS/HTML & CSS Basic.md
+#10 18.58 [11ty] Writing dist/01-frontend/html-and-css/css-hide-element/index.html from ./src/site/notes/01-frontend/HTML&CSS/css hide element.md
+#10 18.65 [11ty] Writing dist/01-frontend/html-and-css/css/index.html from ./src/site/notes/01-frontend/HTML&CSS/CSS-选择器.md
+#10 18.69 [11ty] Writing dist/01-frontend/html-and-css/css-fixed-aspect-radio/index.html from ./src/site/notes/01-frontend/HTML&CSS/css fixed-aspect-radio.md
+#10 18.75 [11ty] Writing dist/01-frontend/html-and-css/css-media-query/index.html from ./src/site/notes/01-frontend/HTML&CSS/css media query.md
+#10 18.81 [11ty] Writing dist/01-frontend/html-and-css/css-layout-unit/index.html from ./src/site/notes/01-frontend/HTML&CSS/css-layout-unit.md
+#10 18.88 [11ty] Writing dist/01-frontend/html-and-css/css-flex/index.html from ./src/site/notes/01-frontend/HTML&CSS/css-flex.md
+#10 18.92 [11ty] Writing dist/01-frontend/html-and-css/css-z-index/index.html from ./src/site/notes/01-frontend/HTML&CSS/css-z-index.md
+#10 19.00 [11ty] Writing dist/01-frontend/html-and-css/css3-multi-background/index.html from ./src/site/notes/01-frontend/HTML&CSS/css3-multi-background.md
+#10 19.03 [11ty] Writing dist/01-frontend/html-and-css/css-pseudo-elements-class/index.html from ./src/site/notes/01-frontend/HTML&CSS/css-pseudo-elements-class.md
+#10 19.07 [11ty] Writing dist/01-frontend/html-and-css/css-bfc/index.html from ./src/site/notes/01-frontend/HTML&CSS/css浮动 与 BFC.md
+#10 19.13 [11ty] Writing dist/01-frontend/html-and-css/form/index.html from ./src/site/notes/01-frontend/HTML&CSS/form表单.md
+#10 19.18 [11ty] Writing dist/01-frontend/html-and-css/encode-uri-and-encode-uri-component/index.html from ./src/site/notes/01-frontend/HTML&CSS/encodeURI&encodeURIComponent.md
+#10 19.23 [11ty] Writing dist/07-life/nextcloud-self-host/index.html from ./src/site/notes/07-Life/nextcloud-self-host.md
+#10 19.29 [11ty] Writing dist/01-frontend/html-and-css/html-input/index.html from ./src/site/notes/01-frontend/HTML&CSS/html-input.md
+#10 19.33 [11ty] Writing dist/01-frontend/html-and-css/html5-semantic-elements/index.html from ./src/site/notes/01-frontend/HTML&CSS/html5-semantic-elements.md
+#10 19.37 [11ty] Writing dist/01-frontend/html-and-css/tailwindcss-tips/index.html from ./src/site/notes/01-frontend/HTML&CSS/tailwindcss-tips.md
+#10 19.41 [11ty] Writing dist/01-frontend/html-and-css/position-relative-and-static/index.html from ./src/site/notes/01-frontend/HTML&CSS/position relative&static.md
+#10 19.46 [11ty] Writing dist/01-frontend/html-and-css/transition-vs-animation/index.html from ./src/site/notes/01-frontend/HTML&CSS/transition vs animation.md
+#10 19.49 [11ty] Writing dist/01-frontend/html-and-css/why-translate-instead-of-position/index.html from ./src/site/notes/01-frontend/HTML&CSS/why-translate-instead-of-position.md
+#10 19.52 [11ty] Writing dist/01-frontend/js/es-module-vs-common-js/index.html from ./src/site/notes/01-frontend/JS/ES-Module Vs CommonJS.md
+#10 19.57 [11ty] Writing dist/01-frontend/js/object-apis/index.html from ./src/site/notes/01-frontend/JS/Object apis.md
+#10 19.62 [11ty] Writing dist/01-frontend/js/event-capture-and-event-bubbling/index.html from ./src/site/notes/01-frontend/JS/EventCapture&EventBubbling.md
+#10 19.65 [11ty] Writing dist/01-frontend/js/file-reader-api/index.html from ./src/site/notes/01-frontend/JS/FileReader API.md
+#10 19.70 [11ty] Writing dist/01-frontend/js/basic/index.html from ./src/site/notes/01-frontend/JS/basic.md
+#10 19.73 [11ty] Writing dist/01-frontend/js/async-foreach-and-for-loop/index.html from ./src/site/notes/01-frontend/JS/async foreach and for loop.md
+#10 19.81 [11ty] Writing dist/01-frontend/js/date/index.html from ./src/site/notes/01-frontend/JS/date.md
+#10 19.84 [11ty] Writing dist/01-frontend/js/deepclone/index.html from ./src/site/notes/01-frontend/JS/deepclone.md
+#10 19.90 [11ty] Writing dist/01-frontend/js/forbidden-object-modify/index.html from ./src/site/notes/01-frontend/JS/forbidden object modify.md
+#10 19.95 [11ty] Writing dist/01-frontend/js/js-array-apis/index.html from ./src/site/notes/01-frontend/JS/js-array apis.md
+#10 20.01 [11ty] Writing dist/01-frontend/js/js-iterator/index.html from ./src/site/notes/01-frontend/JS/js-iterator.md
+#10 20.09 [11ty] Writing dist/01-frontend/js/debounce-and-throttle/index.html from ./src/site/notes/01-frontend/JS/debounce&throttle.md
+#10 20.15 [11ty] Writing dist/01-frontend/js/js-proxy-api/index.html from ./src/site/notes/01-frontend/JS/js-proxy api.md
+#10 20.29 [11ty] Writing dist/01-frontend/js/lexical-context-closure/index.html from ./src/site/notes/01-frontend/JS/lexical-context-closure.md
+#10 20.34 [11ty] Writing dist/01-frontend/js/event-loop/index.html from ./src/site/notes/01-frontend/JS/eventLoop.md
+#10 20.39 [11ty] Writing dist/01-frontend/js/ways-to-create-object/index.html from ./src/site/notes/01-frontend/JS/ways-to-create-object.md
+#10 20.42 [11ty] Writing dist/01-frontend/react/react-router-basic/index.html from ./src/site/notes/01-frontend/React/ReactRouter Basic.md
+#10 20.47 [11ty] Writing dist/01-frontend/js/new-underhood/index.html from ./src/site/notes/01-frontend/JS/new underhood.md
+#10 20.51 [11ty] Writing dist/01-frontend/react/react-core/index.html from ./src/site/notes/01-frontend/React/React Core.md
+#10 20.57 [11ty] Writing dist/01-frontend/react/what-are-react-server-components-rs-cs/index.html from ./src/site/notes/01-frontend/React/What are React Server Components(RSCs).md
+#10 20.62 [11ty] Writing dist/01-frontend/js/try-catch/index.html from ./src/site/notes/01-frontend/JS/try-catch.md
+#10 20.65 [11ty] Writing dist/01-frontend/react/custom-hook-use-hot-key/index.html from ./src/site/notes/01-frontend/React/custom hook - useHotKey.md
+#10 20.69 [11ty] Writing dist/01-frontend/js/and/index.html from ./src/site/notes/01-frontend/JS/原型&原型链.md
+#10 20.76 [11ty] Writing dist/01-frontend/react/electronjs-kylin-build-hello-world/index.html from ./src/site/notes/01-frontend/React/electronjs-kylin-build-hello-world.md
+#10 20.80 [11ty] Writing dist/01-frontend/react/use-reducer-state-manage/index.html from ./src/site/notes/01-frontend/React/useReducer state manage.md
+#10 20.84 [11ty] Writing dist/01-frontend/vue/vue-core/index.html from ./src/site/notes/01-frontend/Vue/Vue Core.md
+#10 20.87 [11ty] Writing dist/01-frontend/vue/nuxt-vue-deploy-diff/index.html from ./src/site/notes/01-frontend/Vue/nuxt vue deploy diff.md
+#10 20.90 [11ty] Writing dist/01-frontend/vue/vue-async-component/index.html from ./src/site/notes/01-frontend/Vue/vue-AsyncComponent.md
+#10 20.94 [11ty] Writing dist/01-frontend/react/tailwind-merge-class/index.html from ./src/site/notes/01-frontend/React/tailwind-merge 解决class 重复.md
+#10 20.99 [11ty] Writing dist/01-frontend/react/virual-dom/index.html from ./src/site/notes/01-frontend/React/virual-dom.md
+#10 21.04 [11ty] Writing dist/01-frontend/vue/vue-basic/index.html from ./src/site/notes/01-frontend/Vue/vue-basic.md
+#10 21.08 [11ty] Writing dist/01-frontend/vue/vue-keep-alive/index.html from ./src/site/notes/01-frontend/Vue/vue-keep-alive.md
+#10 21.12 [11ty] Writing dist/01-frontend/vue/vue-router/index.html from ./src/site/notes/01-frontend/Vue/vue-router.md
+#10 21.15 [11ty] Writing dist/01-frontend/vue/vue-slot/index.html from ./src/site/notes/01-frontend/Vue/vue-slot.md
+#10 21.20 [11ty] Writing dist/01-frontend/vue/vue3-reactive/index.html from ./src/site/notes/01-frontend/Vue/vue3-reactive.md
+#10 21.25 [11ty] Writing dist/02-backend/spring-mybatis/index.html from ./src/site/notes/02-backend/spring + mybatis 自动化更新时间字段.md
+#10 21.31 [11ty] Writing dist/02-backend/index/index.html from ./src/site/notes/02-backend/index.md
+#10 21.35 [11ty] Writing dist/01-frontend/browser/brower-process-thread-list/index.html from ./src/site/notes/01-frontend/browser/brower-process-thread-list.md
+#10 21.40 [11ty] Writing dist/01-frontend/build/webpack-package/index.html from ./src/site/notes/01-frontend/build/webpack package.md
+#10 21.46 [11ty] Writing dist/01-frontend/vue/vue2-reactive/index.html from ./src/site/notes/01-frontend/Vue/vue2-reactive.md
+#10 21.52 [11ty] Writing dist/01-frontend/browser/web-worker/index.html from ./src/site/notes/01-frontend/browser/web-worker.md
+#10 21.57 [11ty] Writing dist/01-frontend/network/osi-model-networking-layer/index.html from ./src/site/notes/01-frontend/network/OSI-model-networking-layer.md
+#10 21.61 [11ty] Writing dist/01-frontend/build/webpack-vite-diff/index.html from ./src/site/notes/01-frontend/build/webpack-vite-diff.md
+#10 21.67 [11ty] Writing dist/01-frontend/network/cdn-tech/index.html from ./src/site/notes/01-frontend/network/CDN-tech.md
+#10 21.72 [11ty] Writing dist/01-frontend/build/webpack-splitchunks/index.html from ./src/site/notes/01-frontend/build/webpack-splitchunks.md
+#10 21.76 [11ty] Writing dist/01-frontend/network/cache-control/index.html from ./src/site/notes/01-frontend/network/cache-control.md
+#10 21.80 [11ty] Writing dist/01-frontend/vue/vue-next-tick/index.html from ./src/site/notes/01-frontend/Vue/vue-nextTick.md
+#10 21.86 [11ty] Writing dist/01-frontend/network/net-status-304/index.html from ./src/site/notes/01-frontend/network/net-status-304.md
+#10 21.90 [11ty] Writing dist/01-frontend/network/cookie/index.html from ./src/site/notes/01-frontend/network/cookie.md
+#10 21.94 [11ty] Writing dist/01-frontend/network/octet-stream-header/index.html from ./src/site/notes/01-frontend/network/octet-stream header.md
+#10 22.05 [11ty] Writing dist/01-frontend/network/http1-x-http2/index.html from ./src/site/notes/01-frontend/network/http1.x-http2.md
+#10 22.10 [11ty] Writing dist/01-frontend/network/refresh-token-and-access-token/index.html from ./src/site/notes/01-frontend/network/refresh-token&access-token.md
+#10 22.16 [11ty] Writing dist/01-frontend/network/net-cache/index.html from ./src/site/notes/01-frontend/network/net-cache.md
+#10 22.20 [11ty] Writing dist/01-frontend/nodejs/process-next-tick/index.html from ./src/site/notes/01-frontend/nodejs/process.nextTick.md
+#10 22.25 [11ty] Writing dist/01-frontend/network/same-origin-related/index.html from ./src/site/notes/01-frontend/network/same-origin related.md
+#10 22.31 [11ty] Writing dist/01-frontend/nodejs/commander-js-usage/index.html from ./src/site/notes/01-frontend/nodejs/commander.js usage.md
+#10 22.37 [11ty] Writing dist/01-frontend/utils/indexed-db-crud/index.html from ./src/site/notes/01-frontend/utils/IndexedDB_CRUD.md
+#10 22.43 [11ty] Writing dist/01-frontend/ts/ts-object-key-value-subtype/index.html from ./src/site/notes/01-frontend/ts/ts-object-key-value-subtype.md
+#10 22.49 [11ty] Writing dist/01-frontend/utils/imglist-zip/index.html from ./src/site/notes/01-frontend/utils/imglist - zip.md
+#10 22.53 [11ty] Writing dist/01-frontend/utils/utils-lazy-load/index.html from ./src/site/notes/01-frontend/utils/utils-lazyLoad.md
+#10 22.57 [11ty] Writing dist/01-frontend/utils/utils-promise-concurrent/index.html from ./src/site/notes/01-frontend/utils/utils-promise-concurrent.md
+#10 22.62 [11ty] Writing dist/02-backend/db/liquibase-lock/index.html from ./src/site/notes/02-backend/db/liquibase lock删除.md
+#10 22.68 [11ty] Writing dist/02-backend/idea/idea-maven/index.html from ./src/site/notes/02-backend/idea/idea_maven 修改 阿里源.md
+#10 22.72 [11ty] Writing dist/02-backend/java/java-enum/index.html from ./src/site/notes/02-backend/java/java enum-字符串.md
+#10 22.76 [11ty] Writing dist/01-frontend/utils/utils-tree-map/index.html from ./src/site/notes/01-frontend/utils/utils-tree-map.md
+#10 22.81 [11ty] Writing dist/01-frontend/utils/utils-tree-list-to-tree/index.html from ./src/site/notes/01-frontend/utils/utils - treeList to tree.md
+#10 22.84 [11ty] Writing dist/02-backend/java/jabba-jdk-windows/index.html from ./src/site/notes/02-backend/java/jabba管理jdk-windows.md
+#10 22.88 [11ty] Writing dist/02-backend/utils/java-execute-bash/index.html from ./src/site/notes/02-backend/utils/Java-execute-bash 指令.md
+#10 22.93 [11ty] Writing dist/01-frontend/utils/utils-tree-path-find/index.html from ./src/site/notes/01-frontend/utils/utils-tree path find.md
+#10 22.97 [11ty] Writing dist/02-backend/cloud/nacos-multiple-config/index.html from ./src/site/notes/02-backend/cloud/nacos_multiple_config.md
+#10 23.01 [11ty] Writing dist/02-backend/maven/maven-win/index.html from ./src/site/notes/02-backend/maven/maven 安装 -win - 翻译.md
+#10 23.04 [11ty] Writing dist/03-projects/pdf-notes/pdf-web-frame-work-brain-storm/index.html from ./src/site/notes/03-Projects/PDF_Notes/PDF-web-frameWork-brainStorm.md
+#10 23.09 [11ty] Writing dist/03-projects/ai-visual/aimbot-install-guide/index.html from ./src/site/notes/03-Projects/ai-visual/aimbot install guide.md
+#10 23.13 [11ty] Writing dist/03-projects/ai-visual/cudnn-windows-install/index.html from ./src/site/notes/03-Projects/ai-visual/cudnn windows install安装.md
+#10 23.17 [11ty] Writing dist/02-backend/utils/copy-properties-skip-null/index.html from ./src/site/notes/02-backend/utils/copyProperties skip null.md
+#10 23.22 [11ty] Writing dist/03-projects/ai-visual/onnxruntime-directml-pred-demo/index.html from ./src/site/notes/03-Projects/ai-visual/onnxruntime-directml-pred-demo.md
+#10 23.25 [11ty] Writing dist/03-projects/ai-visual/tensor-rt/index.html from ./src/site/notes/03-Projects/ai-visual/tensorRT 安装使用.md
+#10 23.31 [11ty] Writing dist/03-projects/ai-visual/yolo-augument/index.html from ./src/site/notes/03-Projects/ai-visual/YoloAugument.md
+#10 23.34 [11ty] Writing dist/02-backend/utils/java-thread-pool/index.html from ./src/site/notes/02-backend/utils/java-thread-pool.md
+#10 23.42 [11ty] Writing dist/06-tools/docker/docker/index.html from ./src/site/notes/06-Tools/Docker/docker 入门使用.md
+#10 23.47 [11ty] Writing dist/06-tools/docker/docker-compose-depends-on/index.html from ./src/site/notes/06-Tools/Docker/docker-compose depends on.md
+#10 23.51 [11ty] Writing dist/06-tools/docker/docker-multi-stage/index.html from ./src/site/notes/06-Tools/Docker/Docker-multi-stage.md
+#10 23.54 [11ty] Writing dist/04-algo/recursion/array-flatten/index.html from ./src/site/notes/04-algo/recursion/array flatten.md
+#10 23.62 [11ty] Writing dist/06-tools/docker/network/index.html from ./src/site/notes/06-Tools/Docker/network.md
+#10 23.68 [11ty] Writing dist/06-tools/python/python-file-operation/index.html from ./src/site/notes/06-Tools/Python/Python File Operation.md
+#10 23.74 [11ty] Writing dist/06-tools/docker/docker-media-all-in-one/index.html from ./src/site/notes/06-Tools/Docker/docker media-all-in-one 一站式家庭影院.md
+#10 23.83 [11ty] Writing dist/06-tools/obsidian/digital-garden-excalidraw-usage/index.html from ./src/site/notes/06-Tools/Obsidian/digital-garden excalidraw usage.md
+#10 23.88 [11ty] Writing dist/03-projects/ai-visual/yolov8-tensor-rt-c/index.html from ./src/site/notes/03-Projects/ai-visual/yolov8-tensorRT c++加速.md
+#10 23.95 [11ty] Writing dist/06-tools/git/git-common/index.html from ./src/site/notes/06-Tools/Git/Git Common.md
+#10 24.00 [11ty] Writing dist/06-tools/python/index/index.html from ./src/site/notes/06-Tools/Python/index.md
+#10 24.03 [11ty] Writing dist/06-tools/ci-cd/din-d/index.html from ./src/site/notes/06-Tools/ci-cd/DinD.md
+#10 24.09 [11ty] Writing dist/06-tools/python/python-folder-api/index.html from ./src/site/notes/06-Tools/Python/Python Folder Api操作.md
+#10 24.14 [11ty] Writing dist/06-tools/python/coroutine-and-threading-all-in-one/index.html from ./src/site/notes/06-Tools/Python/coroutine and threading all in one.md
+#10 24.21 [11ty] Writing dist/06-tools/cloudflare/site-speed-optimize-with-cloudflare/index.html from ./src/site/notes/06-Tools/cloudflare/site-speed-optimize-with-cloudflare.md
+#10 24.26 [11ty] Writing dist/06-tools/linux/tar-cmd/index.html from ./src/site/notes/06-Tools/linux/tar cmd.md
+#10 24.33 [11ty] Writing dist/06-tools/ci-cd/gitlab-cicd/index.html from ./src/site/notes/06-Tools/ci-cd/gitlab-CICD.md
+#10 24.38 [11ty] Writing dist/06-tools/linux/vm-ubuntu-add-extra-disk-space/index.html from ./src/site/notes/06-Tools/linux/VM ubuntu add extra disk space.md
+#10 24.44 [11ty] Writing dist/06-tools/nignx/proxy-pass-uri-rewrite/index.html from ./src/site/notes/06-Tools/nignx/proxy-pass uri rewrite.md
+#10 24.50 [11ty] Writing dist/06-tools/nignx/acme-sh-auto-cert/index.html from ./src/site/notes/06-Tools/nignx/acme.sh auto cert.md
+#10 24.54 [11ty] Writing dist/06-tools/nignx/nginx-proxy-manager-custom-conf/index.html from ./src/site/notes/06-Tools/nignx/nginx-proxy-manager-custom-conf.md
+#10 24.59 [11ty] Writing dist/06-tools/nignx/nginx-frontend-spa-page-not-found/index.html from ./src/site/notes/06-Tools/nignx/nginx-frontend-SPA-page-not-found.md
+#10 24.65 [11ty] Writing dist/cursor-keyboard-shortcut/index.html from ./src/site/notes/备忘录/开发/cursor-keyboard-shortcut.md
+#10 24.69 [11ty] Writing dist/01-frontend/react/core-react/react-lazy-load/index.html from ./src/site/notes/01-frontend/React/Core React/React Lazy Load.md
+#10 24.75 [11ty] Writing dist/06-tools/docker/docker-networking-in-compose/index.html from ./src/site/notes/06-Tools/Docker/docker Networking in Compose.md
+#10 24.78 [11ty] Writing dist/06-tools/windows/kms-activate/index.html from ./src/site/notes/06-Tools/windows/kms-activate.md
+#10 24.83 [11ty] Writing dist/01-frontend/react/core-react/react-component-commulucation/index.html from ./src/site/notes/01-frontend/React/Core React/react-component-commulucation.md
+#10 24.91 [11ty] Writing dist/01-frontend/react/core-react/use-callback-use-memo-react-memo/index.html from ./src/site/notes/01-frontend/React/Core React/useCallback, useMemo, React.memo.md
+#10 24.96 [11ty] Writing dist/01-frontend/react/core-react/react-hook-closure-trap/index.html from ./src/site/notes/01-frontend/React/Core React/React Hook closure Trap.md
+#10 25.02 [11ty] Writing dist/01-frontend/react/core-react/how-to-make-request-inside-use-effect/index.html from ./src/site/notes/01-frontend/React/Core React/how to make request inside useEffect.md
+#10 25.08 [11ty] Writing dist/01-frontend/react/core-react/react-basic/index.html from ./src/site/notes/01-frontend/React/Core React/react basic.md
+#10 25.18 [11ty] Writing dist/07-life/dg-workflow/index.html from ./src/site/notes/07-Life/dg-workflow.md
+#10 25.23 [11ty] Writing dist/01-frontend/react/next-js-docs/what-are-react-server-components-rs-cs/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/What are React Server Components(RSCs).md
+#10 25.28 [11ty] Writing dist/01-frontend/browser/web-storage/index.html from ./src/site/notes/01-frontend/browser/web storage 鍓嶇瀛樺偍鏂规.md
+#10 25.33 [11ty] Writing dist/01-frontend/build/npm/semver-versioning/index.html from ./src/site/notes/01-frontend/build/npm/semver versioning.md
+#10 25.39 [11ty] Writing dist/06-tools/nignx/uri-url-diff/index.html from ./src/site/notes/06-Tools/nignx/uri-url diff.md
+#10 25.44 [11ty] Writing dist/01-frontend/vue/vue2-basic/index.html from ./src/site/notes/01-frontend/Vue/vue2-basic.md
+#10 25.72 [11ty] Writing dist/01-frontend/react/next-js-docs/next-js-route-walkthrough/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/NextJS Route walkthrough.md
+#10 25.77 [11ty] Writing dist/01-frontend/react/next-js-docs/next-js-cheat-sheet/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/NextJS CheatSheet.md
+#10 25.81 [11ty] Writing dist/02-backend/java/java-string-string-buffer-string-builder/index.html from ./src/site/notes/02-backend/java/基础/Java - String, StringBuffer, StringBuilder.md
+#10 25.87 [11ty] Writing dist/01-frontend/build/npm/package-json-cheatsheet/index.html from ./src/site/notes/01-frontend/build/npm/package.json cheatsheet.md
+#10 25.90 [11ty] Writing dist/01-frontend/react/next-js-docs/data-fetching/get-server-side-props/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/Data Fetching/getServerSideProps.md
+#10 25.93 [11ty] Writing dist/01-frontend/react/next-js-docs/data-fetching/get-static-props/index.html from ./src/site/notes/01-frontend/React/NextJS Docs/Data Fetching/getStaticProps.md
+#10 27.70 [11ty] Benchmark   2032ms  10%   163× (Configuration) "dataview-js-links" Transform
+#10 27.70 [11ty] Benchmark   2202ms  10%   163× (Configuration) "picture" Transform
+#10 27.70 [11ty] Copied 99 files / Wrote 163 files in 20.24 seconds (124.2ms each, v2.0.1)
+#10 28.31 
+#10 28.31 > web@1.0.0 build:sass
+#10 28.31 > sass src/site/styles:dist/styles --style compressed
+#10 28.31 
+#10 30.19 npm notice
+#10 30.19 npm notice New major version of npm available! 10.8.2 -> 11.2.0
+#10 30.19 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.2.0
+#10 30.19 npm notice To update run: npm install -g npm@11.2.0
+#10 30.19 npm notice
+#10 DONE 30.3s
+
+#6 [web stage-1 1/3] FROM docker.io/library/nginx:1.27.3@sha256:bc2f6a7c8ddbccf55bdb19659ce3b0a92ca6559e86d42677a5a02ef6bda2fcef
+#6 CACHED
+
+#11 [web stage-1 2/3] COPY --from=builder /build/dist /usr/share/nginx/html
+#11 DONE 0.3s
+
+#12 [web stage-1 3/3] COPY nginx.conf /etc/nginx/conf.d/default.conf
+#12 DONE 0.1s
+
+#13 [web] exporting to image
+#13 exporting layers
+#13 exporting layers 0.5s done
+#13 writing image sha256:cba9fa552e4fed56d293d441fee506d601565b1aa56acd7c7ff340426dae6733 done
+#13 naming to docker.io/library/knowledge-base-web 0.0s done
+#13 DONE 0.6s
+
+#14 [web] resolving provenance for metadata file
+#14 DONE 0.0s
+

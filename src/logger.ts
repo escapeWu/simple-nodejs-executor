@@ -2,8 +2,8 @@ import * as log4js from "log4js";
 
 log4js.configure({
     appenders: {
-      everything: { type: "file", filename: "all-the-logs.log" },
-      emergencies: { type: "file", filename: "oh-no-not-again.log" },
+      everything: { type: "file", filename: "RUN.log" },
+      emergencies: { type: "file", filename: "ERROR.log" },
       "just-errors": {
         type: "logLevelFilter",
         appender: "emergencies",
@@ -16,8 +16,6 @@ log4js.configure({
   });
   
   const logger = log4js.getLogger();
-  logger.debug("This goes to all-the-logs.log");
-  logger.info("As does this.");
-  logger.error("This goes to all-the-logs.log and oh-no-not-again.log");
+  logger.info("Logger 启动");
 
   export default log4js.getLogger();

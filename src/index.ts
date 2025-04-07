@@ -6,7 +6,6 @@ import { getMarkdownTreeMetadata } from './utils'
 import { batchCreatePost } from './orm'
 import R from 'ramda'
 import logger from './logger'
-import dayjs from 'dayjs';
 
 
 const app = express();
@@ -37,14 +36,14 @@ app.post('/hooks', (req, res) => {
 	}
 
 	debounceTimeout = setTimeout(() => {
-    logger.info(`Start Execute: ${dayjs().format()}`)
+    logger.info(`Start Execute`)
 
 		if (executeType === 'function') {
 			logger.info("execute function", executeFnName)
 
 			executeFnName === 'scanPost'
 				? R.pipe(getMarkdownTreeMetadata, batchCreatePost)(scriptDir)
-				: logger.info('TODO')
+				: logger.error(`不支持的操作 ${executeFnName}`)
 
 		} else {
 			// 设置工作目录
@@ -71,5 +70,5 @@ app.post('/hooks', (req, res) => {
 
 
 app.listen(port, () => {
-	logger.info(`Server is listening on port ${port}`);
+	logger.info(`服务启动，端口： ${port}`);
 });
