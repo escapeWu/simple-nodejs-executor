@@ -62,7 +62,7 @@
     }
   },
   "dependencies": {
-    "@prisma/client": "^5.22.0",
+    "@prisma/client": "^6.8.2",
     "express": "^4.19.2",
     "log4js": "^6.9.1",
     "prisma": "^6.4.1",
